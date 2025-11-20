@@ -76,3 +76,4 @@ class UserSymptoms:
 
     def get_all(self):
         return self.symptoms
+        )
