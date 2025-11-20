@@ -58,3 +58,22 @@ class Ailment:
             cures=d.get("cures", []),
             precautions=d.get("precautions", []),
         )
+    
+
+class UserSymptoms:
+    def __init__(self, symptoms=None):
+        """
+        Represents a user's reported symptoms.
+        
+        :param symptoms: List of symptoms (strings)
+        """
+
+        self.symptoms = symptoms or []
+
+    def add_from_input(self, input_str: str):
+        parts = [s.strip() for s in input_str.split(",") if s.strip()]
+        self.symptoms.extend(parts)
+
+    def get_all(self):
+        return self.symptoms
+        )
